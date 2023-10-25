@@ -18,6 +18,7 @@ export const detalharCarro = async (req: Request, res: Response) => {
         if (!data) {
             return res.status(404).json({ message: 'Carro não encontrado' })
         }
+        return res.json(data)
     } catch {
         return res.status(500).json({ message: 'Erro interno do servidor' })
     }
